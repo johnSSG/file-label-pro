@@ -1,0 +1,16 @@
+Ready(app.init);
+Click('.selector button', interFace.selector);
+Change('#projects', project.load);
+Click('#scanRfid', tag.read);
+Click('#commission', tag.commission);
+Click('#revoke', tag.revoke);
+Click('#tagDisplay pre', item.edit);
+Click('.clear', interFace.clear);
+Click('.createList', project.createReport);
+Click('.createReport', project.createReport);
+Click('#logOut', user.logOut);
+Keyup('#userApiKey', user.saveApiKey);
+Click('#forgotPassword', user.forgotPassword);
+Submit('#account-form', user.editAccount);
+Click('.nav-tabs a', interFace.changeTab);
+Change('#device', user.changeDevice);

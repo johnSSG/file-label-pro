@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy"/>
+<title>File Label Pro</title>
+<link rel="stylesheet" href="themes/handheld.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/mobile.css" />
+<link rel="stylesheet" href="css/dataTables.css">
+</head>
+<body>
+
+
+	<div id="home" data-role="page" data-theme="a">
+	  <div data-role="header" data-add-back-btn="true">
+	    <h1>File Label Pro</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+        <li><a href="#find">Find</a></li>
+        <li><a href="#view">View</a></li>
+        <li><a href="#tag">Tag</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>	    
+	  </div>
+	</div>
+	  
+	  
+	  
+	<div id="find" data-role="page" data-theme="a">
+	  <div data-role="header" data-add-back-btn="true">
+	    <h1>Find</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+	    
+	  </div>
+	</div>
+	
+	
+	
+	<div id="view" data-role="page" data-theme="a">
+	  <div data-role="header" data-add-back-btn="true">
+	    <h1>View</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+      <label>Project<br>
+        <select id="projects" class="form-control"></select>
+      </label>
+      <div id="project">
+        <table class="display" cellspacing="0" width="100%">
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+	  </div>
+	</div>
+
+
+
+	<div id="tag" data-role="page" data-theme="a">
+	  <div data-role="header" data-add-back-btn="true">
+	    <h1>Tag</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+  
+	  </div>
+	</div>
+
+
+
+	<div id="settings" data-role="page" data-theme="a">
+	  <div data-role="header" data-add-back-btn="true">
+	    <h1>Settings</h1>
+	    <button id="logOut" class="ui-btn-right">Log Out</button>
+	  </div>
+	  <div role="main" class="ui-content">
+	    <h2>Your Account</h2>
+			<form id="account-form">
+        <label>Name<br>
+          <input type="text" name="name" class="form-control">
+        </label>
+        <label>Company<br>
+          <input type="text" name="company" class="form-control">
+        </label>
+        <label>Email<br>
+          <input type="email" name="email" class="form-control">
+        </label>
+        <label>Old Password<br>
+          <input type="password" autocomplete="off" value="" name="oldPassword" class="form-control">
+        </label>
+        <label>Password<br>
+          <input type="password" name="password" class="form-control">
+        </label>
+        <label>Password Confirmation<br>
+          <input type="password" name="passwordConfirmation" class="form-control">
+        </label>
+        <input type="hidden" value="editAccount" name="action">
+        <button class="btn btn-primary">Edit Account</button>
+      </form>   
+      <h2>Your Device</h2>
+      <select id="device">
+        <option value="tsl1128">TSL 1128</option>
+        <option value="atid911">Atid 911</option>
+      </select>
+	  </div>
+	</div>	
+
+
+
+	<div id="logIn" data-role="page" data-theme="a">
+	  <div data-role="header">
+	    <h1>Log In</h1>
+	  </div>
+	  <div role="main" class="ui-content">
+      <div class="form"></div>
+	  </div>
+	</div>	
+	
+
+  <script>
+	  var cordovaApp = false;
+	  var p = String(window.location.protocol).toLowerCase();
+	  if(p.indexOf('file:') != -1) {cordovaApp = true;}    
+  </script>
+  <script src="js/lib/jquery.js"></script>
+  <script src="js/lib/mobile.js"></script>
+  <script src="js/lib/lib.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/lib/dataTables.js"></script>
+  <script src="js/lib/Preferences.js"></script>
+  <script src="js/lib/tsl1128.js"></script>
+  <script src="js/lib/atid911.js"></script>
+  <script src="js/user.js"></script>
+  <script src="js/project.js"></script>
+  <script src="js/item.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/events.js"></script>  
+</body>
+</html>

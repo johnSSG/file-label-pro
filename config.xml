@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.filelabel.pro"
+        version     = "1.0.0" >
+    <name>File Label Pro</name>
+
+    <description>
+        Handheld tracking application.
+    </description>
+
+    <author href="https://filelabel.co" email="info@simplicitysolutionsgroup.com">
+        Simplicity Solutions Group, LLC
+    </author>
+
+    <access origin="*" subdomains="true" />
+    <access origin="https://utapp.net" subdomains="true" />
+    <access origin="https://filelabel.co" subdomains="true" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
+    <allow-navigation href="*" />
+
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm"/>
+    <plugin name="org.apache.cordova.network-information" spec="0.2.15" source="pgb" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm"/>
+    <gap:plugin name="cordova-plugin-statusbar" source="npm"/>
+    <gap:plugin name="cordova-plugin-device" source="npm"/>
+    <gap:plugin name="cordova-plugin-bluetooth-serial" source="npm"/>
+    
+    <preference name="permissions" value="none"/>
+    <preference name="fullscreen" value="false" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="orientation" value="portrait" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarOverlaysWebView" value="false" /> 
+    
+    <icon src="icon.png" />
+</widget>
